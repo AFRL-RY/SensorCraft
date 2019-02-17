@@ -1,0 +1,269 @@
+===============================
+11 Artificial Intelligence (AI)
+===============================
+
+In this chapter we are going to add some basic decision making into the mob
+created in `chapter 09 MOB <09_mob.html>`__ to act as a simple Artificial
+Intelligence (AI) in the game. In this guide the words Artificial Intelligence
+is a extradition.  AI is an interesting area of research for the Air Force
+Research Lab.  AI enables smart phones, autonomous vehicles, internet search,
+and other computer applications.  AI is used in video games to control MOBs.
+Recently AI has been used to beat human experts at chess and the ancient game
+of go.  This guide is going to provide you a very simple foundation on which
+to learn about AI.  To get started we are going to implement a new class to 
+hold logic for the mob in a separate file and then use the logic written there
+to move the mob.
+
+New Class File
+--------------
+
+First, make a new file called AI_class_TVR.py (with your initials replacing
+TVR). If you look at the first few lines of any of the previous tutorials, take 
+note of the import statements that tell the file to pull in information from
+previously defined files and libraries. In the new AI_class_TVR.py file, we 
+only need one import command. At the top of the new file, type the following:
+
+.. literalinclude:: ../code/AI_class.py
+	:lines: 1
+
+This helps the code be compatible with different versions of python which 
+deal with certain inputs and operations slightly differently.
+
+Now we need to declare the class and write a function to initialize the object. Type the following below the previous line:
+
+.. literalinclude:: ../code/AI_class.py
+	:lines: 6-16
+
+This creates a new class called ``AI`` and defines the ``__init__`` function. 
+In ``__init__``, notice the member variables declared. ``mode`` will store what
+type of action the AI will take. ``status`` determines whether or not the AI is
+active and making decisions. Finally ``count`` will track how long it has been
+since the AI has taken action as to prevent it from acting too often and too
+quickly. Recall that this function is executed whenever the frame is refreshed
+in the display window, which occurs 60-120 times a second depending on the 
+frame rate. If the mob were to move at every frame update it would be unneeded
+computation.
+
+Our initial goal is to make the AI follow or run away from Dr. Steve. Add two
+functions below ``__init__``  on line 18 as follows:
+
+.. literalinclude:: ../code/AI_class.py
+	:pyobject: AI.follow
+
+.. literalinclude:: ../code/AI_class.py
+	:pyobject: AI.run_away
+
+These two functions are very similar in terms of their logic. The first 
+function ``follow`` takes ``xm`` and ``zm``, the x and z coordinates of the 
+object controlled by the AI, and ``x`` and ``z``, the location of what the AI
+is trying to follow or run away from. In both functions there is an object
+called ``move``. This is a list of booleans (an object that can take on the 
+value of either ``True`` or ``False``) that will store what direction(s) 
+the object should be moved to accomplish the specified task. The following 
+if-else statements then determine which items in ``move`` should be true and
+returns this list of actions.
+
+Using the New AI Class - Part 1
+-------------------------------
+
+Now that we have defined a new class in a new file we need some way of using 
+this file in the code we've already written. Copy the 10_health_part_4.py code 
+from the previous example (replacing TVR with your initials) 
+as follows::
+
+	cp 10_health_part_4.py 11_AI_part_1_TVR.py
+
+We first need to let this file access and use the class from AI_class_TVR.py. 
+To do this, go to the top of 11_AI_part_1_TVR.py and add the line 
+``import AI_class_TVR`` so the first few lines of the file read as follows:
+
+.. literalinclude:: ../code/11_AI_part_1.py
+	:lines: 1-13
+
+Your code should slightly differ here in that the line that reads 
+``import AI_class`` above should read ``AI_class_TVR`` in your code where TVR
+is replaced by your initials. The basic rule when importing from another file
+is that if you have a file called "name_here.py", any files that want to use
+code written in "name_here.py" should have a statement similar to 
+``import name_here``.
+
+Next go to the end of the ``__init__`` function in the ``Model`` class around
+line 170 and add an instance of this AI object so that the end of the 
+``__init__`` function reads as follows:
+
+.. literalinclude:: ../code/11_AI_part_1.py
+	:pyobject: Model.__init__
+
+This creates an instance of the AI class in the model object that we can use. 
+Next after the end of the ``check_mob_dist`` function add the following:
+
+.. literalinclude:: ../code/11_AI_part_1.py
+	:pyobject: Window.move_mob
+
+This function executes the moves specified by the code in the AI class. The
+modes must be set correctly. Go to the ``on_key_press`` method and add the 
+following to the end:
+
+.. literalinclude:: ../code/11_AI_part_1.py
+	:pyobject: Window.on_key_press
+
+Notice by adding ``self.model.mob_loaded = True`` for when 'F' is pressed, the
+mob will inflict damage on Dr. Steve when it is following him. It will not 
+cause damage when the mob is running away.
+
+Find the ``update`` function on line 675 in the window class and add a call to 
+``move_mob`` at the end while commenting out the call to ``process_mob``. The 
+function should then read as follows:
+
+.. literalinclude:: ../code/11_AI_part_1.py
+	:pyobject: Window.update
+
+Notice by commenting out the call to ``process_mob`` we are ensuring the program 
+uses the logic from the new AI_class instead of what was written in 
+`chapter 09 MOB <09_mob.html>`__.
+
+Execute the code, you should be able to press 'L' to load the mob and
+then either 'F' or 'R' to make the mob follow Dr. Steve or run away from him. 
+Don't forget that when the mob is following Dr. Steve, it can reduce his health 
+if it gets too close. Be careful! You don't want to get game over.
+
+It is worth discussing that even though we are describing this behavior as AI,
+it is simply the application of an algorithm on some input that results in a
+direction that points toward Dr. Steve. We can see the mob as following Dr.
+Steve, but it is really just following a set mathematical pattern that we
+implemented. Thus this behavior can be perceived as a Artificial Intelligence 
+that follows Dr. Steve by someone who doesn't know how the code works.  Most
+Artificial Intelligence software implemented today follow simple mathematical 
+patterns.  
+
+No More Walking Through Walls - Part 2
+--------------------------------------
+
+Let's perform a scientific experiment.
+
+Run the program from the previous section above and press "L" to launch the 
+mob. Now place some blocks between yourself and the mob. Press "F" so the mob
+starts to follow you. Wait, that's not right. The mob walked straight through 
+the blocks and made them disappear! Let's fix this bug and prevent the mob from
+walking through walls.  
+
+As is the guide custom copy the 11_AI_part_1.py code  from the previous 
+example (replacing TVR with your initials) like below::
+
+	cp 11_AI_part_1.py 11_AI_part_2_TVR.py
+
+First, we need to add a variable to keep track of the mob's height. In the Model
+class' ``__init__`` function, recall we already have two variables 
+``self.mob_x_position`` and ``self.mob_z_position`` to track the mob at ground
+level. Add another variable just after these two so it reads as follows:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Model.__init__
+
+Now jump down to the ``check_mob_dist`` function. Let's change it to account 
+for differences in height by changing the function definition to read as below:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Window.check_mob_dist
+
+The main difference is that now when we calculate the distance between the mob
+and Dr. Steve, we also consider any difference in height. If we didn't do this,
+the game would consider two objects at the same x and z coordinates as being at
+the same position, regardless of what their y coordinates were. This would be
+equivalent to saying two people on different floors of a building were standing
+next to each other.
+
+Now find where we defined the functions ``mob_move_*`` where ``*`` is a 
+direction. Previously we ignored the height at which the mob was located so we 
+just had it at a constant y position of -1 which is ground level. Now that we 
+are tracking the height of the mob, we need to change this. Throughout these 
+functions, you will notice calls to ``self.add_block`` and 
+``self.remove_block``. In each call there is a -1. Replace each -1 with 
+``self.mob_y_position``. For example, ``mob_move_right`` should now read as 
+follows:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Model.mob_move_right
+
+Next we need to create methods similar to those we just edited that move the 
+mob vertically. Just after ``mob_move_backward`` add the following two 
+functions:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Model.mob_move_up
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Model.mob_move_down
+
+These functions are almost identical to those defined previously except that 
+now we can move the mob in any direction.
+
+Now go to where the different textures were defined (where we defined 
+``TEXTURE_PATH``) and add the following line:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:lines: 88
+
+Go to the ``move_mob`` function (just after ``check_mob_dist``). We need to 
+make many changes here, so just replace ``move_mob`` with the following two 
+functions:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Window.check_avail
+.. literalinclude:: ../code/11_AI_part_2.py
+	:pyobject: Window.move_mob
+
+The first function checks to see whether there is already an object at the 
+given position. If there is nothing there, it returns ``True``. If something is
+already there it returns ``False``. Note that when we say a function "returns"
+something, this means that when we use the function, not only can we change 
+values passed to the function, but we get some extra value(s) back.
+
+Let's walk through the changes to ``move_mob``. First, we declare a new 
+variable ``moved_up``. This will help us track whether the mob just moved 
+vertically and help us determine if the mob can move down. The next part of the
+code is identical to what we had previously: check what mode the mob is in and
+determine what direction it should move. Next we have the statements that 
+actually move the mob in the specified direction(s). Each direction has almost identical logic so let's only examine one of them closely (the section under the 
+if statements reading ``if out[0]``).
+
+First we get the position, called ``pos``, of the space in front of the mob. We
+check if it is available with a call to ``check_avail``. If there is already
+something there, we want to try and go over it. So we redefine ``pos`` to be the 
+place one in front and one up from the mob's current location and make another
+call to ``check_avail``. If the space directly in front of the mob is available,
+move there. If it isn't and the space above is available, the mob moves there. 
+Otherwise, the mob shouldn't move up or forward at this time.
+
+We use this same logic for each direction, checking one square in the specified
+direction and one above and then moving to the available spot. At the end of the
+function, notice the below few lines:
+
+.. literalinclude:: ../code/11_AI_part_2.py
+	:lines: 1140-1144
+
+This says that while the space just below the mob is available, the mob is above 
+ground level, and the mob did not just move up, the mob should move down a 
+space. This prevents the mob from floating around while it's chasing Dr. Steve 
+or running away from him. That would just be spooky!
+
+Try running the code again. Now if you build a barrier one block high, the mob 
+can get over it. Notice though that the mob now follows the same rules you do,
+it can't get over more than one block so if you build a wall two or more blocks 
+high it gets stuck.
+
+If you go back to the section containing the build hills code (in the model's 
+``_initialize`` function), you can uncomment this section and watch the mob run 
+up and down the hills.  If it is easier you can copy/paste the code from the 
+file called ``11_AI_part_2.py`` around line 198 - 217.
+
+
+Limitations
+-----------
+
+This is a very basic computer controlled character. While it will try and 
+follow Dr. Steve wherever he goes, the mob cannot determine if there is a 
+possible path to him. For example, if you build some steps and go up them, the
+mob may not follow Dr. Steve up the steps unless it was running toward the 
+steps from the correct direction. It may get stuck on the sides. To fix this,
+the game would require a much more complicated algorithm or AI that can look 
+at potential moves it could find a route to get to Dr. Steve.

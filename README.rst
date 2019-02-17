@@ -46,64 +46,9 @@ Getting Started
 To help you get started creating your own Sensor Craft experience, we've created
 a series of tutorials to walk you through each step. Each tutorial will take 
 approximately 15 - 20 minutes to complete and will help you understand the 
-Python programming language. 
+Python programming language. To get started `read the guide <https://readthedocs.org/projects/sensorcraft/badge/?version=stable>`_ 
 
-Below you can find a link to each tutorial and a short description of what 
-topic you will be learning in each one. Each tutorial builds on the previous
-tutorial but they are designed ot stand on their own so feel free to skip 
-around. However, we do recommend starting out with the introduction tutorial 
-so that you will have all of the needed software installed. 
 
-**Thank you for using Sensor Craft.** 
-
-- `Introduction <guide/intro.html>`__
-	- This tutorial goes through how to install Enthought Canopy, the editor we will be using to | view, modify, and run our SensorCraft code. After installing Enthought Canopy, the tutorial walks you through how to install the needed packages to be able to use Sensor Craft. 
-
-- `Building a Flat World <guide/00_flat_world.html>`__
-	- This tutorial goes through how to create your world and make sure it has only a flat 2-tall layer of blocks on the bottom and a block fence around the perimeter of the world. Also, this tutorial goes through how to move your character about inside of your world. 
-
-- `Building Automatically <guide/01_building_automatically.html>`__
-	- This three-part tutorial starts out by discussing the role that programming plays in our everyday lives. In part 1, you learn how to create a function to build a wall automatically. In part 2, you learn how to change the parameters of the wall from part 1. In part 3, you learn how to automatically build a pyramid using a similar method as part 1 and 2. 
-
-- `Creating a 3D Coordinate System <guide/02_3D_coordinate_system.html>`__
-	- This tutorial starts out by talking about mathematics in programming and then introduces the idea of a coordinate system in the game and how to use different blocks to create one. 
-
-- `Displaying the Current Selected Block <guide/03_show_current_block.html>`__
-	- This tutorial teaches you how to change the Graphical User Interface, to make it so you can view which type of block is currently seleted by your character. 
-
-- `Altering Gravity <guide/04_play_with_gravity.html>`__
-	- This turial walks you through how to alter the outside forces acting upon your character, specifically gravity. In this tutorial, you will learn how to change the gravity of the world and speed of your character. 
-
-- `Saving Your World <guide/05_pickling_the_world.html>`__
-	- This tutorial teaches you how to save your world, or pickle is, so that you don't have to restart your world every time that you play. Also in this tutorial, you'll learn some more aspects of Python that will help you later on in the tutorials.
-	  
-- `Opening Your saved world <guide/06_reading_the_pickled_world.html>`__
-	- This tutorial teaches you how to load the saved world that you created in the last tutorial. We recommend doing the "saving Your World" tutorial before this one so that you have a saved world to open. 
-
-- `Launching a Rocket <guide/07_rocket_launch.html>`__
-	- This three-part tutorial, as it may seem, teaches you how to construct a rocket through your code and have it appear in your world. Part 1 shows you how to use keyboard functions to launch the rocket.Then, part 2 shows you how to use a timing system to launch the rocket. Finally, Part 3 shows you how your character can actually go for a ride on the rocket.  
-
-- `Building the National Museum of the United States Air Force <guide/08_making_nmusaf.html>`__
-	- This tutorial teaches you how to replicate the National Museum of the United States Air Force and load it into your world using the Saving Your World and Opening Your Saved World tutorials. 
-
-- `Creating Mobs <guide/09_mob.html>`__
-	- This two-part tutorial teaces you how to create other 'living' creatures in your game. Part 1 teaches you how to use keyboard functions to add or remove mobs into your game. Part 2 teaches you how make the mob move on their own during gameplay. 
-
-- `Creating a Health Bar <guide/10_health.html>`__
-	- This four-part tutorial teaches you how to create an in-game healthbar to track the life left in your player. Part 1 teaches you how to display the health bar. Next, part 2 teaches you how to change the amount of health your player has. Then, part 3 teaches you how to end the game after you run out of health. Finally, part 4 teaches you how to enable mobs to damage your health.  
-
-- `Introducing Artificial Intelligence <guide/11_AI.html>`__
-	- We recommend that you complete the 'Creating Mobs' tutorial as a prerequisite to this one. This two-part tutorial teaches you how to add logic and decision making into the minds of the mobs from the 'Creating Mobs' tutorial. Part 1 shows you how to install and use a new class, an important aspect of programming. Part 2 teaches you how to add certain constraints to the actions of your intelligent mobs. 
-
-- `Creating a Map <guide/12_map.html>`__
-	- This three-part tutorial teaches you how to create a map icon and track different live items in the game.First, part 1 teaches you how to display a map icon into the gameplay window. Then, part 2 teaches you how to constantly track your location on the map. Finally, part 3 teaches you how to track the location of other live items on the map. 
-
-- `Conclusion <guide/conclusion.html>`__
-	- This tutorial points you in the directions of many useful programing resources and sums up our intentions for creating SensorCraft. 
-
-- `Frequently Asked Questions <guide/frequently_asked_questions.html>`__
-	- We try to address common problems and questions in their corresponding tutorials but if you cannot find the answer in the specific tutorial, try searching in this document. 
-	  
 --------------------------------------------------------------------------------------------------------------------------------------
 
 GitHub Release

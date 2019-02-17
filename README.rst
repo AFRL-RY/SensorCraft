@@ -46,7 +46,7 @@ Getting Started
 To help you get started creating your own Sensor Craft experience, we've created
 a series of tutorials to walk you through each step. Each tutorial will take 
 approximately 15 - 20 minutes to complete and will help you understand the 
-Python programming language. To get started `read the guide <https://readthedocs.org/projects/sensorcraft/badge/?version=stable>`_ 
+Python programming language. To get started `read the guide <https://readthedocs.org/projects/sensorcraft/badge/?version=stable>`_.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------

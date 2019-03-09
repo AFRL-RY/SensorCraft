@@ -229,9 +229,9 @@ https://packaging.python.org/tutorials/distributing-packages/
 To Do List
 ----------
 
--Add instructions about IDLE...need something about how to goto a line, how
+- Add instructions about IDLE...need something about how to goto a line, how
 about IDLE = IDLE3 in some cases
--Test on Windows
--A note about running idle from the code directory so you can open files
+- Test on Windows
+- A note about running idle from the code directory so you can open files
 easier
--In chapter 12 part 3 the feet on the mob are not moving, need to fix that
+- In chapter 12 part 3 the feet on the mob are not moving, need to fix that

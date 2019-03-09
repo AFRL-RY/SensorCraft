@@ -235,3 +235,8 @@ To Do List
 - A note about running idle from the code directory so you can open files 
   easier
 - In chapter 12 part 3 the feet on the mob are not moving, need to fix that
+- Move to AFRL-RY GitHub group
+- Make a 2.0 release
+- Post sensorcraft.org web site
+- Get read the docs working with the AFRL-RY GitHub group
+- Post a note on the old SensorCraft github site that we have moved

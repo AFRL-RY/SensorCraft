@@ -29,7 +29,7 @@ the same time get an idea of what it is like to be a Scientist or Engineer for
 the United States Air Force.
 
 To get started download the `latest release zip file
-<https://github.com/rovitotv/SensorCraft/releases/latest>`_  and unzip, then
+<https://github.com/AFRL-RY/SensorCraft/releases/latest>`_  and unzip, then
 open the file "index.html" file in your browser.
 
 A `YouTube video has been created <https://youtu.be/C9n1bS54AIw>`_ to show 
@@ -46,7 +46,10 @@ Getting Started
 To help you get started creating your own Sensor Craft experience, we've created
 a series of tutorials to walk you through each step. Each tutorial will take 
 approximately 15 - 20 minutes to complete and will help you understand the 
-Python programming language. To get started `read the guide <https://readthedocs.org/projects/sensorcraft/badge/?version=stable>`_.
+Python programming language. To get started `read the guide <https://readthedocs.org/projects/sensorcraft/badge/?version=stable>`_.  The SensorCraft code is available in the
+latest release `latest release zip file 
+<https://github.com/AFRL-RY/SensorCraft/releases/latest>`_  and unzip, then
+examine the code directory.  
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -82,28 +85,6 @@ The latest version will always be on the `github project site
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-CD Release
-==========
-
-For STEM events we have created a CD from this content, to begin with the CD open index.html
-
-Last commit before March 3rd, 2016 demonstration for My Brother's Keeper STEM 
-Event
-
-Overview of the products in this directory for the CD release:
-
-* HTML web version that can be open in web browser is in _build/html/index.html
-* PDFs of the web pages are in PDFs/
-* code includes python code for the different exercises
-* images the images that appear in the PDFs and HTML
-* OriginalFoglemanCode the code started 
-* SensorCraftLogo is a directory with the CD cover and RYA generated art work
-* EnthoughtCanopy directory contains Windows and Mac versions of Enthought Canopy Express, please check the Enthought web site for the latest version
-
-The CD doesn't have the rocket launch chapter so consider updating from the
-latest github release.
-
---------------------------------------------------------------------------------------------------------------------------------------
 
 Logos and Third Party Materials
 ===============================
@@ -125,26 +106,13 @@ https://account.mojang.com/documents/brand_guidelines
 
 We believe this product conforms to Mojang's guidelines.
 
-Enthought Canopy Express
-------------------------
-
-Included on the CD is Enthought Canopy Express which is a Python distribution
-that includes Python plus pyglet that performs the OpenGL work.  In addition
-Enthought Canopy Express includes an excellent editor that will make it easier
-to work with the code.  Enthought offers an academic product that is free for
-students and teachers, more `details are provided at Enthought's web site
-<https://store.enthought.com/#canopy-academic>`_
-
-Question 10 of `Enthought's Canopy FAQ
-<https://www.enthought.com/products/canopy/faq/>`_ grants us permission to
-redistribute Enthought Canopy Express and can include it on CDs or DVDs.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-Miscellaneous
-=============
+Developer Notes
+===============
 
-This project is done with restructured text which is Python's default for
+The documentation is created with restructured text which is Python's default for
 documentation it creates html pages.  
 
 References to Sphinx documentation:
@@ -176,6 +144,8 @@ following commands::
 	git tag -a v1.5 -m "version 1.5 - Directory consolidation"
 	git push
 	git push --tags
+
+Update the tag in stable on readthedocs.org.  
 
 Dependencies
 ------------
@@ -239,7 +209,6 @@ To Do List
   easier
 - In chapter 12 part 3 the feet on the mob are not moving, need to fix that
 - Move to AFRL-RY GitHub group
-- Make a 2.0 release
 - Post sensorcraft.org web site
 - Get read the docs working with the AFRL-RY GitHub group
 - Post a note on the old SensorCraft github site that we have moved

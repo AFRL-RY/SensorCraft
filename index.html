@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>SensorCraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #bcd6ef;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #bcd6ef;
+    font-size: 50px;
+  }
+  .logo {
+    color: #bcd6ef;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #bcd6ef;
+  }
+  .carousel-indicators li {
+    border-color: #bcd6ef;
+  }
+  .carousel-indicators li.active {
+    background-color: #bcd6ef;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #bcd6ef; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #bcd6ef;
+    background-color: #fff !important;
+    color: #bcd6ef;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #bcd6ef !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #bcd6ef;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #bcd6ef;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #bcd6ef !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #bcd6ef;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="./images/nav_bar_logo.jpg" class="img-thumbnail" alt="Dr. Steve" width="150" height="75"> </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#gettingstarted">GETTING STARTED</a></li>
+        <li><a href="#development">DEVELOPMENT</a></li>
+        <li><a href="#development">SUPPORT</a></li>
+        <li><a href="#contributors">CONTRIBUTORS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>SensorCraft</h1> 
+  <p>Teaching kids how to program with a world of blocks</p> 
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-7">
+      <h2>About SensorCraft</h2><br>
+      <h4>
+        Open source tools and code to teach 5th - 12th graders Python
+        programming within a Minecraft environment. Most people are familiar 
+        with Minecraft, for this project we are using a "world of blocks"
+        environment created in the Python programming language that will 
+        allow children to explore simulations in order to conduct their own
+        scientific experiments. 
+      </h4><br>
+      <p>
+      Kids can change gravity, learn how to build structures programmatically,
+      and even launch a rocket. The Air Force Research Laboratory (AFRL) 
+      Sensors Directorate located in Dayton, Ohio created this project to 
+      inspire kids of all ages to learn to program and at the same time get an 
+      idea of what it is like to be a Scientist or Engineer for the United 
+      States Air Force. (Minecraft is developed by Mojang and not related to 
+      this project nor do they endorse this project)    
+      </p>
+    </div>
+    <div class="col-sm-5">
+      
+      <img src="./images/sensorcraft_lab_coat_smallest.jpg" class="img-rounded" alt="Dr. Steve">
+    </div>
+  </div>
+</div>
+
+<!-- Container (Getting Started Section) -->
+<div id="gettingstarted" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>GETTING STARTED</h2><br>
+      <h4>To get started download the <a href="https://github.com/rovitotv/SensorCraft/releases/latest">latest release zip file</a> and unzip, then 
+      open the file "index.html" file in your browser.</h4><br>
+      <p>A <a href="https://youtu.be/C9n1bS54AIw">YouTube video has been created</a> to show students how to install SensorCraft and Python on your computer then run the examples. The video is for Mac OS X but the process for Windows and Linux is similar. 
+      <strong>SensorCraft supports both Python 2.7 and Python 3.x, we 
+      recommend using the latest version of Python 3.x</strong></p>
+      <br>
+      <p>
+      The SensorCraft guide is available on <a href="https://sensorcraft.readthedocs.io/en/stable/?badge=stable">readthedocs.io</a> for easy browsing.  
+      </p>
+      <br>
+      <p>
+      <strong>Requirements:</strong> PC running Linux, Mac OS, or Windows (7 or 
+      10) capable of running OpenGL.  The PC does not have to be super 
+      powerful we have tested SensorCraft on older computers.  At this time we 
+      don't support Chrome OS, Android, or IOS but hope to in the near future.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Development Section) -->
+<div id="development" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-7">
+      <h2>Development/Support</h2><br>
+      <h4>
+      The development of SensorCraft is being done on <a href="https://github.com/rovitotv/SensorCraft">GitHub</a> where we encourage 
+      you to take part. In science it is not unusual to start with somebody 
+      else’s work. Sir Isaac Newton is quoted as saying “if I have seen
+      further, it is by standing on the shoulders of giants”. Newton was 
+      talking about how science builds upon the base that has been built 
+      before. We would argue nowhere in the history of man kind has the
+      shoulders of giants concept been used like it has in software. Software
+      is easy to replicate and share. In Sir Isaac Newton’s spirit this guide
+      will be on <a href="https://github.com/rovitotv/SensorCraft">GitHub</a>
+      for all to modify, edit, and add to as people see fit. We are not perfect
+      this guide will have typos and mistakes please submit a pull request or 
+      create a new issue. If you make a cool programming exercise please feel 
+      free to submit that modification via 
+      <a href="https://github.com/rovitotv/SensorCraft">GitHub</a>. Finally if
+      you need support with SensorCraft please 
+      <a href="https://github.com/rovitotv/SensorCraft/issues">post an issue</a>
+      and will get back to you ASAP.  
+      </h4><br>
+      <p>
+      </p>
+    </div>
+    <div class="col-sm-5">
+      
+      <a href="https://github.com/rovitotv/SensorCraft"><img src="./images/fork-me-on-github.png" class="img-rounded" alt="Dr. Steve"></a>
+    </div>
+  </div>
+</div><br>
+  
+<!-- Container (Pricing Section) -->
+<div id="contributors" class="container-fluid bg-grey">
+  <div class="text-center">
+    <h2>Contributors</h2>
+  </div>
+  <div class="row slideanim">
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Todd Rovito</strong> Project Lead, 
+      created chapter 1 - 8, quality control, spell checker</li>
+      <li class="list-group-item"><strong>Gina Vasey</strong> 2018 ATR Center, Health, AI, Map, Creeper, Circuits, Story Mode</li>
+      <li class="list-group-item"><strong>Peter Harmer</strong> Legacy Student, Circuits, Go Home Feature</li>
+      <li class="list-group-item"><strong>Alex Ronnebaum</strong> 2018 ATR Center, YouTube Video Creator, Web Site Assistance</li>
+      <li class="list-group-item"><strong>Adam Mitchell</strong> Dayton Regional STEM School, Dr. Steve can ride the rocket, MOB</li>      
+    </ul>
+    <h4>
+      <strong>THANKS TO OUR SPONSORS</strong> AFRL Sensors Directorate, ATR Center, and the Legacy Program!
+    </h4>
+    <p>
+    Do you want to get paid to work on SensorCraft? If you are a high school
+    or undergraduate student consider applying to the 
+    <a href="https://www.wright.edu/autonomy-technology-research-center">ATR 
+    Center</a> or the <a href="http://wpafbstem.com/pages/legacy.html">AF 
+    Legacy Program</a>.  In your application please let them know that you want 
+    to work on SensorCraft.
+    <p>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

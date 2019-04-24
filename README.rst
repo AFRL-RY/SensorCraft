@@ -12,7 +12,7 @@ README
 	:target: http://sensorcraft.readthedocs.io/en/stable/?badge=stable
 	:alt: Stable Documentation Status
 
-`Introduction YouTube video <https://youtu.be/nZWZNGVQwbM>`_ is now available!
+`Introduction YouTube video <https://youtu.be/W94dtE1kx7Q>`_ is now available!
 Open source tools and code to teach 5th – 12th graders Python Programming 
 within a Minecraft environment. Most people are familiar with 
 `Minecraft <https://minecraft.net/en-us/>`_ (Minecraft is developed by Mojang 

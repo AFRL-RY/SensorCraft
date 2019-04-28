@@ -25,11 +25,9 @@ simple 'for loop' to build a wall by pushing the ``b`` key.  We created this
 `YouTube video about this chapter 01 Building Automatically.
 <https://youtu.be/xZ4p8IJWzMg>`_
 
-
-To get started 
-with this programming exercise, first copy 00_flat_world_TVR.py code to a new file
-01_building_automatically_TVR.py but replace TVR with your initials using the
-following command::
+To get started with this programming exercise, first copy 00_flat_world_TVR.py 
+code to a new file 01_building_automatically_TVR.py but replace TVR with your 
+initials using the following command::
 
 	cp 00_flat_world_TVR.py 01_building_automatically_TVR.py
 
@@ -72,7 +70,9 @@ Building a Great Wall Automatically - Part 2
 --------------------------------------------
 
 By changing a single variable in the for loop, the wall can be turned into a 
-great wall. Simply change the build_wall method as follows:
+great wall. We created this `YouTube video about this chapter 01 Building 
+Automatically - part 2. <https://youtu.be/_wT6MCsjsmg>`_. Simply change the 
+build_wall method as follows:
 
 .. literalinclude:: ../code/01_building_automatically_part2.py
 	:pyobject: Window.build_wall 
@@ -89,10 +89,13 @@ Building a Pyramid Automatically - Part 3
 
 Pyramids can be a challenging structure to build in a block based game because
 of all the repetition. Pyramids are essentially smaller and smaller squares
-laid on-top of each other.  Before we build a pyramid, let's make it easier to
-construct solid shapes by creating a method that takes two x, y, z points as
-parameters, then adds blocks in between those two points.  Lets call this new
-method ``add_blocks()``, and place it in the model class on line 255.
+laid on-top of each other. We created this `YouTube video about this chapter 
+01 Building Automatically - part 3. <https://youtu.be/O3LtZh5du7E>`_.  
+
+Before we build a pyramid, let's make it easier to construct solid shapes by
+creating a method that takes two x, y, z points as parameters, then adds blocks
+in between those two points.  Lets call this new method ``add_blocks()``, and
+place it in the model class on line 255.
 
  .. literalinclude:: ../code/01_building_automatically_part3.py
 	:pyobject: Model.add_blocks

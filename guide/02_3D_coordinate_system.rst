@@ -13,7 +13,8 @@ However, you still need to have a good understanding of higher level
 mathematics depending on the types of applications you are programming. Some
 of the math in video games can get complex so we will take it slow over the 
 next few chapters.  Since this tutorial is a block based game some of the math
-is simplified because everything is a cube.
+is simplified because everything is a cube. We created this `YouTube video 
+about this chapter 02 3D Coordinate System. <https://youtu.be/WesDR-w3_Ko>`_.
 
 Coordinate System Display
 -------------------------

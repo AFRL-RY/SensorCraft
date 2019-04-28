@@ -5,7 +5,7 @@ One thing about SensorCraft that is that the GUI (the Graphical User Interface,
 this is the screen where you play the game) does not show the current block
 selected.  Sometimes you forget which block is selected and will place the
 wrong block accidentally.  We created this `YouTube video 
-about this chapter 03 Show Current Block. <https://youtu.be/VLh-U3fI2_Y>`_.
+about this chapter 03 Show Current Block. <https://youtu.be/VLh-U3fI2_Y>`_
 A simple way to remedy this problem is to extend the "draw_label" method which
 we talked about in the previous chapter that shows the numbers in the upper 
 left corner:

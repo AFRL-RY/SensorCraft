@@ -19,10 +19,15 @@ Computer Scientist for the Government, having the source code
 makes it possible to verify the system performance and understand 
 the weakness or strength of an algorithm.
 
-Fortunately, open source software exists and is thriving today making computer programming
-accessible to everyone. For this exercise we are going to use a simple 'for loop'
-to build a wall by pushing the ``b`` key.  To get started with this programming
-exercise, first copy 00_flat_world_TVR.py code to a new file
+Fortunately, open source software exists and is thriving today making computer 
+programming accessible to everyone. For this exercise we are going to use a 
+simple 'for loop' to build a wall by pushing the ``b`` key.  We created this 
+`YouTube video about this chapter 01 Building Automatically.
+<https://youtu.be/xZ4p8IJWzMg>`_
+
+
+To get started 
+with this programming exercise, first copy 00_flat_world_TVR.py code to a new file
 01_building_automatically_TVR.py but replace TVR with your initials using the
 following command::
 

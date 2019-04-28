@@ -4,7 +4,7 @@
 
 In this exercise, we will modify the original code downloaded to get rid of 
 everything but a flat world with a one-block-high "fence" around the perimeter.
-We created this `YouTube video about about chapter 00 Flat World 
+We created this `YouTube video about this chapter 00 Flat World.
 <https://youtu.be/dsLC7CDM0hg>`_
 
 To get started with this programming exercise, first copy the original game's 

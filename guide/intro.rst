@@ -8,7 +8,8 @@ this project we are using a Minecraft type environment created in the Python
 programming language. The Air Force Research Laboratory (AFRL) Sensors
 Directorate  located in Dayton, Ohio created this guide to inspire kids of all
 ages to learn to program and at the same time get an idea of what it is like to
-be a Scientist or Engineer for the Air Force.
+be a Scientist or Engineer for the Air Force. We created this `youtube.com
+video about SensorCraft<https://youtu.be/W94dtE1kx7Q>`_
 
 Python is an amazing programming language that is a widely used high-level
 programming language.  Python's design philosophy emphasizes code readability

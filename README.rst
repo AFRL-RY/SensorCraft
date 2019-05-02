@@ -32,9 +32,9 @@ To get started download the `latest release zip file
 <https://github.com/AFRL-RY/SensorCraft/releases/latest>`_  and unzip, then
 open the file "index.html" file in your browser.
 
-A `YouTube video has been created <https://youtu.be/C9n1bS54AIw>`_ to show 
-students how to install SensorCraft and Enthought Canopy then run the examples.  
-The video is for Mac OS X but the process for Windows and Linux is similar.  
+A `YouTube video has been created <https://youtu.be/W94dtE1kx7Q>`_ to show 
+students how to install Python and SensorCraft then run the examples.  
+The video is for Windows but the process for macOS and Linux is similar.  
 **SensorCraft supports both Python 2.7 and Python 3.x, make sure you install a 
 version of Enthought Canopy that supports Python 2.7 or Python 3.x.**
 

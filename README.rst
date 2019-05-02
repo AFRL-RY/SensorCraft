@@ -69,7 +69,7 @@ YouTube videos were created to walk a student through the first few chapters:
 GitHub Release
 ==============
 
-`v2.1 Thanks to student Alex Ronnebaum for the excellent videos <https://github.com/AFRL-RY/SensorCraft/releases/download/v2.1/SensorCraftV2.1.zip>`
+`v2.1 Thanks to student Alex Ronnebaum for the excellent videos <https://github.com/AFRL-RY/SensorCraft/releases/download/v2.1/SensorCraftV2.1.zip>`_
 
 `v2.0 Thanks to students Gina Vasey, Alex Ronnebaum, Peter Harmer hot key to return
 to the center, creepers, circuits, and much more <https://github.com/AFRL-RY/SensorCraft/releases/download/v2.0/SensorCraftV2.0.zip>`_

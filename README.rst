@@ -62,8 +62,6 @@ YouTube videos were created to walk a student through the first few chapters:
 - `Building Automatically Part 3 <https://youtu.be/O3LtZh5du7E>`_
 - `3D Coordinate System <https://youtu.be/WesDR-w3_Ko>`_
 
-
-
 --------------------------------------------------------------------------------------------------------------------------------------
 
 GitHub Release

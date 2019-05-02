@@ -53,7 +53,7 @@ download, unzip, then examine the code directory.
 YouTube Videos
 --------------
 
-YouTube videos were created to walk a student through a chapter:
+YouTube videos were created to walk a student through the first few chapters:
 
 - `Introduction YouTube video <https://youtu.be/W94dtE1kx7Q>`_
 - `Flat World <https://youtu.be/dsLC7CDM0hg>`_

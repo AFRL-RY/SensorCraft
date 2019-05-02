@@ -50,11 +50,26 @@ Python programming language. To get started `read the guide <http://sensorcraft.
 `latest release zip file <https://github.com/AFRL-RY/SensorCraft/releases/latest>`_  
 download, unzip, then examine the code directory.  
 
+YouTube Videos
+--------------
+
+YouTube videos were created to walk a student through a chapter:
+
+- `Introduction YouTube video <https://youtu.be/W94dtE1kx7Q>`_
+- `Flat World <https://youtu.be/dsLC7CDM0hg>`_
+- `Building Automatically Part 1 <https://youtu.be/xZ4p8IJWzMg>`_
+- `Building Automatically Part 2 <https://youtu.be/_wT6MCsjsmg>`_
+- `Building Automatically Part 3 <https://youtu.be/O3LtZh5du7E>`_
+- `3D Coordinate System <https://youtu.be/WesDR-w3_Ko>`_
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 GitHub Release
 ==============
+
+`v2.1 Thanks to student Alex Ronnebaum for the excellent videos <https://github.com/AFRL-RY/SensorCraft/releases/download/v2.1/SensorCraftV2.1.zip>`
 
 `v2.0 Thanks to students Gina Vasey, Alex Ronnebaum, Peter Harmer hot key to return
 to the center, creepers, circuits, and much more <https://github.com/AFRL-RY/SensorCraft/releases/download/v2.0/SensorCraftV2.0.zip>`_

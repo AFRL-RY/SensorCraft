@@ -132,7 +132,7 @@ upgrade steps above and verify that you have the correct version.
 
 After you have confirmed that the correct version of pyglet is installed, next
 you have to download the `latest SensorCraft release zip file
-<https://github.com/rovitotv/SensorCraft/releases/latest>`_.  The easiest thing
+<https://github.com/AFRL-RY/SensorCraft/releases/latest>`_.  The easiest thing
 is to unzip SensorCraft and place in the home directory.  SensorCraft is simply
 a bundle of html, py, and texture files.  This guide assumes that SensorCraft is
 installed in the home directory with the simple name of SensorCraft please
